@@ -49,6 +49,8 @@ public class Player extends Rectangle {
 		return this.score;
 	}
 	
-	
+	public double getY() {
+		return this.y;
+	}
 
 }

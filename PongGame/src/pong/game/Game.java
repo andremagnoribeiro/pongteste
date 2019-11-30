@@ -6,6 +6,7 @@ import java.awt.image.BufferStrategy;
 
 import pong.input.KeyManager;
 import pong.states.StateManager;
+import pong.states.States;
 import pong.view.Tela;
 
 public class Game implements Runnable{
@@ -105,5 +106,9 @@ public class Game implements Runnable{
 	public static void stopGame(int code) {
 		Game.running = false;
 		System.exit(code);
+	}
+	
+	public States getState() {
+		return StateManager.getState();
 	}
 }

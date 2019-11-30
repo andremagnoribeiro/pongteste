@@ -105,4 +105,13 @@ public class GameState implements States {
 			xVel = -4;
 		}
 	}
+	
+	public Player getPlayerA() {
+		return this.A;
+	}
+
+	
+	public Player getPlayerB() {
+		return this.B;
+	}
 }
