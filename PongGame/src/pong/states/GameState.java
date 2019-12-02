@@ -89,21 +89,23 @@ public class GameState implements States {
 	}
 
 	private void limits() {
-		if(ball.x < 0) {
-			start();
+		if(ball.x < 0) { /*1*/
+			start();/*2*/
 			B.incScore();
-		}if(ball.x > (Game.width-5)) {
-			start();
-			A.incScore();
-		}else if(ball.y < 80) {
-			yVel = 4;
-		}else if(ball.y > (Game.height - 15)){
-			yVel = -4;
-		}else if(A.intersects(ball)){
-			xVel = 4;
-		}else if(B.intersects(ball)) {
-			xVel = -4;
 		}
+		if(ball.x > (Game.width-5)) {/*3*/		
+			start();/*4*/
+			A.incScore();
+		}else if(ball.y < 80) {/*5*/
+			yVel = 4;/*6*/
+		}else if(ball.y > (Game.height - 15)){/*7*/
+			yVel = -4;/*8*/
+		}else if(A.intersects(ball)){/*9*/
+			xVel = 4;/*10*/
+		}else if(B.intersects(ball)) {/*11*/
+			xVel = -4;/*12*/
+		}
+		/*13*/
 	}
 	public Player getPlayerA() {
 		return this.A;

@@ -52,10 +52,36 @@ public class Player extends Rectangle {
 		return this.y;
 	}
 	
-	public double getX() {
-		return this.x;
-	}
+
 	
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
