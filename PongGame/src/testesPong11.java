@@ -18,111 +18,81 @@ class testesPong11{
 
 	@Test
 	void teste1() throws InterruptedException, AWTException {
+		//Criando instancia do jogo
 		Game game = new Game();
 		game.start();
 		Thread.sleep(2000);
+		//Criando robo para jogar
 		Robot r = new Robot();
-
 		
-		//  Caso de Teste
-		
+		//Navegando pelo menu
 		r.keyPress(300);
 		r.keyPress(300);
 		r.keyPress(KeyEvent.VK_LEFT);
 		r.keyRelease(KeyEvent.VK_LEFT);
 		r.keyPress(KeyEvent.VK_RIGHT);
 		r.keyRelease(KeyEvent.VK_RIGHT);
-		
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
-	
 		r.keyPress(KeyEvent.VK_UP);
 		r.keyRelease(KeyEvent.VK_UP);
 		r.keyPress(KeyEvent.VK_UP);
 		r.keyRelease(KeyEvent.VK_UP);
-		
 		r.keyPress(KeyEvent.VK_F);
 		r.keyRelease(KeyEvent.VK_F);
-		
-		
-		
 		r.keyPress(KeyEvent.VK_UP);
 		r.keyRelease(KeyEvent.VK_UP);
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(2000);		
 		Thread.sleep(2000);
+		//Verificando estado do jogo
 		GameState gs = (GameState)game.getState();
-		
-		
 		r.keyPress(KeyEvent.VK_END);
 		Thread.sleep(10000);
 		r.keyRelease(KeyEvent.VK_END);
-		
-		
 		Thread.sleep(2000);
 		
 		
-		//1 Caso de Teste
+		//Caso de Teste 1 - Movimentando jogador A para cima
 		double yPlayerA = gs.getPlayerA().getY();
-		
 		Thread.sleep(2000);
 		r.keyPress(KeyEvent.VK_W);
 		Thread.sleep(2000);
 		r.keyRelease(KeyEvent.VK_W);
-	
 		Thread.sleep(2000);
 		assertNotEquals(yPlayerA, gs.getPlayerA().getY());
 		
 		
-		//2 Caso de Teste
+		//Caso de Teste 2 - Movimentando jogador A para baixo
 		yPlayerA = gs.getPlayerA().getY();
-		
-		
 		r.keyPress(KeyEvent.VK_S);
 		Thread.sleep(500);
 		r.keyRelease(KeyEvent.VK_S);
-		
 		assertNotEquals(yPlayerA, gs.getPlayerA().getY());
 		
-		//3 Caso de Teste
-		
-		double yPlayerB = gs.getPlayerA().getY();
-		
+		//Caso de Teste 3 -  Movimentando jogador B para baixo
+		double yPlayerB = gs.getPlayerB().getY();
 		r.keyPress(KeyEvent.VK_DOWN);
 		Thread.sleep(1000);
 		r.keyRelease(KeyEvent.VK_DOWN);
-		
 		assertNotEquals(yPlayerB, gs.getPlayerB().getY());
-		
-		
-		
 		Thread.sleep(30000);
 		
-	
-		
-		//4 Caso de Uso
-		
-		yPlayerB = gs.getPlayerA().getY();
-		
+		//Caso de Teste 4 - Movimentando jogador B para cima
+		yPlayerB = gs.getPlayerB().getY();
 		r.keyPress(KeyEvent.VK_UP);
 		Thread.sleep(500);
 		r.keyRelease(KeyEvent.VK_UP);
-		
 		assertNotEquals(yPlayerB, gs.getPlayerB().getY());
 		
-		// 5 Caso de Teste
-		
-		
+		//Caso de teste 5 - Voltando para o menu
 		r.keyPress(KeyEvent.VK_ESCAPE);
-		
 		Thread.sleep(2000);
-		
-		
-		
-		// 6 Caso de Teste
+
+		//Caso de Teste 6 - Navegando novamente
 		
 		r.keyPress(KeyEvent.VK_UP);
 		r.keyRelease(KeyEvent.VK_UP);
