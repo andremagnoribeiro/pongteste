@@ -1,4 +1,4 @@
-package testesPong;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,60 +91,19 @@ class testesPong11{
 		//Caso de teste 5 - Voltando para o menu
 		r.keyPress(KeyEvent.VK_ESCAPE);
 		Thread.sleep(2000);
-
-		//Caso de Teste 6 - Navegando novamente
-		
-		r.keyPress(KeyEvent.VK_UP);
-		r.keyRelease(KeyEvent.VK_UP);
+		assertEquals("pong.states.MenuState", game.getState().getClass().getName());
 		
 		
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
-		
-		
-		Thread.sleep(2000);
-		
-		//assertEquals("pong.states.GameState", game.getState().getClass().getName());
-		
-		
-		
-		// 7 Caso de Teste
-		r.keyPress(KeyEvent.VK_ESCAPE);
-		
-		
+		//Caso de Teste 6- Testando navegabilidade para a tela Help
 		Thread.sleep(8000);
-		
-		//assertEquals("pong.states.MenuState", game.getState().getClass().getName());
-		
-
-		
-		Thread.sleep(8000);
-		
-		
-		// 8 Caso de Teste
-		
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
-		
 		Thread.sleep(6000);
-		
-		
-		//assertEquals("pong.states.HelpState", game.getState().getClass().getName());
+		assertEquals("pong.states.HelpState", game.getState().getClass().getName());
 
-		
-		r.keyPress(KeyEvent.VK_F);
-		r.keyRelease(KeyEvent.VK_F);
-		
-		
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.keyRelease(KeyEvent.VK_ENTER);
-		
-		Thread.sleep(6000);
-		
-		Thread.sleep(5000);
-	
+
 
 	}
 
