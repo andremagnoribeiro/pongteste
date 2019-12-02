@@ -1,3 +1,4 @@
+package testesPong;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,7 @@ import org.junit.jupiter.api.Test;
 import pong.game.Game;
 import pong.states.GameState;
 
-class testesPong{
+class testesPong11{
 
 	@Test
 	void teste1() throws InterruptedException, AWTException {
@@ -24,6 +25,7 @@ class testesPong{
 
 		
 		//  Caso de Teste
+		
 		r.keyPress(300);
 		r.keyPress(300);
 		r.keyPress(KeyEvent.VK_LEFT);
@@ -144,14 +146,13 @@ class testesPong{
 		
 		//assertEquals("pong.states.MenuState", game.getState().getClass().getName());
 		
-	
-		
+
 		
 		Thread.sleep(8000);
 		
 		
-		
 		// 8 Caso de Teste
+		
 		r.keyPress(KeyEvent.VK_DOWN);
 		r.keyRelease(KeyEvent.VK_DOWN);
 		r.keyPress(KeyEvent.VK_ENTER);
@@ -171,10 +172,6 @@ class testesPong{
 		r.keyRelease(KeyEvent.VK_ENTER);
 		
 		Thread.sleep(6000);
-		
-	
-		
-		
 		
 		Thread.sleep(5000);
 	
