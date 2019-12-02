@@ -105,7 +105,11 @@ public class GameState implements States {
 			xVel = -4;
 		}
 	}
+<<<<<<< HEAD
+
+=======
 	
+>>>>>>> 7c6a1c3a0f43a423d5678626720a1e45ff38ad66
 	public Player getPlayerA() {
 		return this.A;
 	}
@@ -114,4 +118,24 @@ public class GameState implements States {
 	public Player getPlayerB() {
 		return this.B;
 	}
+<<<<<<< HEAD
+	
+	public void setBallX(double x) {
+		this.ball.x = (int)x;
+	}
+	
+	public void setBallY(double y) {
+		this.ball.y = (int)y;
+	}
+	public int getYVel() {
+		return this.yVel;
+	}
+	
+	public int getXVel() {
+		return this.xVel;
+	}
+	
+
+=======
+>>>>>>> 7c6a1c3a0f43a423d5678626720a1e45ff38ad66
 }

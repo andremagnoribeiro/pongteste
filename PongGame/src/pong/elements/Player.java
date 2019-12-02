@@ -48,6 +48,13 @@ public class Player extends Rectangle {
 	public int getScore() {
 		return this.score;
 	}
+	public double getY() {
+		return this.y;
+	}
+	
+	public double getX() {
+		return this.x;
+	}
 	
 	public double getY() {
 		return this.y;
