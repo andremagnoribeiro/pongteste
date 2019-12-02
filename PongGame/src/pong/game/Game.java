@@ -107,11 +107,8 @@ public class Game implements Runnable{
 		Game.running = false;
 		System.exit(code);
 	}
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 7c6a1c3a0f43a423d5678626720a1e45ff38ad66
+
 	public States getState() {
 		return StateManager.getState();
 	}
